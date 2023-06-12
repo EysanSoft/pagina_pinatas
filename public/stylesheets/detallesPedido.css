@@ -1,0 +1,88 @@
+body {
+    margin: 150px 300px;
+    background-color: lightblue;
+}
+
+p, strong {
+    font-size: larger;
+}
+
+p, a, strong, b {
+    font-size: normal;
+    font-family: cursive;
+}
+
+h1 {
+    font-family: cursive;
+    text-align: center;
+}
+
+.botonRegresar {
+    position: relative;
+    bottom: 10px;
+    left: 775px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: solid;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-right-color: black;
+    border-bottom-color: black;
+}
+
+.botonRegresar:hover {
+    background-color: cadetblue;
+}
+
+.box1 {
+    margin: 50px;
+    padding: 20px;
+    background-color: rgba(95, 158, 160, 0.301);
+}
+
+.box2 {
+    margin: 50px;
+    background-color: rgba(95, 158, 160, 0.301);
+    padding: 20px;
+}
+
+.box3 {
+    margin: 50px;
+    background-color: rgba(95, 158, 160, 0.301);
+    padding: 20px;
+}
+
+.box4 {
+    margin: 50px;
+    background-color: rgba(95, 158, 160, 0.301);
+    padding: 20px;
+}
+
+.tablero {
+    border: none;
+}
+
+.select {
+    width: 180px;
+    height: 25px;
+    display: inline-block;
+}
+
+.inputSubmit {
+    width: 120px;
+    height: 25px;
+    display: inline-block;
+    background-color: teal;
+    color: white;
+}
+
+.inputSubmit:hover {
+    background-color: cadetblue;
+}
+
+.textoCentrado {
+    text-align: center;
+}

@@ -1,0 +1,37 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Mis Pagos
+    link(rel='stylesheet' href='/stylesheets/misPagos.css')
+table.posicionTabla
+    caption Tarjetas de Credito Registradas
+    thead
+        tr
+            th Numero de Tarjeta
+            th Nombre del la Tarjeta
+            th Fecha de Vencimiento
+    tbody
+        if (data.length > 0)
+            each dato in data
+                tr
+                    td #{dato.numeroDeTarjeta}
+                    td #{dato.nombreEnTarjeta}
+                    td #{dato.fechaVencimiento}
+        else
+            tr
+                td No tiene registrada ningun metodo de pago.
+.texto1
+    h2 Mis Pagos
+    p.textoGrande
+        | En este apartado, podra registrar los metodos de pago, en este caso, solo contamos con pago via tarjeta de credito.
+a.botonRegistrar(href='registrarCredito') Registrar una Tarjeta de Credito
+form(action="pagos/eliminarCredito" method="POST").formulario1
+    fieldset.tablero
+        .posicion1
+            input.inputNumber(type='number' name='numPago' placeholder='Tarjeta a Eliminar' required='')
+        .posicion2
+            input.inputSubmit1(type='submit' value='Eliminar Tarjeta')
+        .posicion3
+            p(class="alert alert-danger") #{message}
+a.botonRegresar(href='menuUsuario') Regresar

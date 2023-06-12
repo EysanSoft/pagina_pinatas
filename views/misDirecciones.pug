@@ -1,0 +1,48 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Mis Direcciones
+    link(rel='stylesheet' href='/stylesheets/misDirecciones.css')
+table.posicionTabla
+    caption Direcciones Registradas
+    thead
+        tr
+            th Estado
+            th Nombre del Residente
+            th Direccion de Domicilio
+            th Codigo Postal
+            th Numero Telefonico
+    tbody
+        if (data.length > 0)
+            each dato in data
+                tr
+                    td #{dato.estado}
+                    td #{dato.nombreResidente}
+                    td #{dato.direccion}
+                    td #{dato.codigoPostal}
+                    td #{dato.numeroTelefonico}
+        else
+            tr
+                td No tiene registrada ninguna direccion.
+
+.texto1
+    h2 Mis Direcciones
+    p.textoGrande
+        | En este apartado, podra registrar las direcciones a donde le enviaremos sus pedidos.
+a.botonRegistrar(href='registrarDireccion') Registrar una nueva Direccion
+form(action="direcciones/eliminarDireccion" method="POST").formulario1
+    fieldset.tablero
+        .posicion1
+            input.inputNumber(type='text' name='direccion' placeholder='Direccion a Eliminar' required='')
+        .posicion2
+            input.inputSubmit1(type='submit' value='Eliminar Pedido')
+form(action="actualizarDireccion" method="POST").formulario2
+    fieldset.tablero
+        .posicion1
+            input.inputNumber(type='text' name='direccion2' placeholder='Direccion a Actualizar' required='')
+        .posicion2
+            input.inputSubmit1(type='submit' value='Actualizar Pedido')
+        .posicion3
+            p(class="alert alert-danger") #{message}
+a.botonRegresar(href='menuUsuario') Regresar

@@ -1,0 +1,43 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Index
+    link(rel='stylesheet' href='/stylesheets/inicio.css')
+a.iconoUsuario(href='menuUsuario')
+    img(src='/images/icono.png' alt='icono de usuario' width='50' height='50')
+p.nombreUsuario #{nombreUsuario} #{apellidoUsuario}
+h1 La Hada Madrina de las Pi&ntilde;atas
+img.logoPinata(src='/images/piñata2.png' alt='Foto del Logo de la Pagina' width='150' height='150')
+img.logoHada(src='/images/Hada.png' alt='Foto del Logo de la Pagina' width='200' height='200')
+header
+    nav.barraNavegacion
+        #lista
+            ul.menu
+                li#actual
+                    a(href='') Inicio
+                li#noActual
+                    a(href='galeria') Galeria
+                li#noActual
+                    a(href='pedidos') Hacer un pedido
+#caja1
+    p
+        | Bienvenidos a la pagina, aqui van a encontrar solo lo mejor de lo mejor en
+        | pi&ntilde;atas. Pidenos lo que quieras, hacemos pi&ntilde;atas de todo tipo, desde pi&ntilde;atas
+        | tradicionales hasta personajes a la moda.
+    hr
+    img#fotoPrincipal1(src='/images/galeria1.jpeg' alt='Foto del Logo de la Pagina' width='255' height='250')
+    img#fotoPrincipal2(src='/images/galeria2.jpeg' alt='Foto del Logo de la Pagina' width='255' height='250')
+    img#fotoPrincipal3(src='/images/galeria3.jpeg' alt='Foto del Logo de la Pagina' width='255' height='250')
+    img#fotoPrincipal4(src='/images/galeria4.jpeg' alt='Foto del Logo de la Pagina' width='255' height='250')
+    hr
+    p &iquest;Le gusta lo que ve? &iexcl;echele un vistazo a la galeria!
+    br
+#caja2
+    hr
+    p La Hada Madrina de las Pi&ntilde;atas, 2020
+    p Contacto Personal: 961 123 4567
+    p Horario de atencion telefonica:
+    p lunes a viernes de 10:00 am hasta las 18:00pm
+    p Correo Electronico: pi&ntilde;atas@lahadadelaspi&ntilde;atas.com.mx
+    hr

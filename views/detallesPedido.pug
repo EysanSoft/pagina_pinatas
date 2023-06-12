@@ -1,0 +1,97 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Detalles del Pedido
+    link(rel='stylesheet' href='/stylesheets/detallesPedido.css')
+h1 Pedido ##{data1[0].id} "#{data1[0].nombrePedido}"
+p.textoCentrado
+    | Estos son todos los detalles sobre el pedido seleccionado, puede cambiar el estado en la que se encuentra el pedido.
+.box1
+    strong Detalles sobre el pedido
+    hr
+    p
+        | Nombre de la Pi&ntilde;ata:
+        b
+            |  #{data1[0].nombrePedido}
+    p
+        | Fecha de Entrega:
+        b
+            |  #{data1[0].fechaLimite}
+    p
+        | Tama&ntilde;o de la Pi&ntilde;ata:
+        b
+            |  #{data1[0].tamano}
+    p
+        | Pi&ntilde;ata Tipo:
+        b
+            |  #{data1[0].tipo}
+    p Descripcion sobre el pedido:
+    b #{data1[0].descripcion}
+    p
+        | Estado Actual:
+        b
+            |  #{data1[0].estadoActual}
+    form(action="pedidos/actualizarEstado/"+id method="POST")
+        fieldset.tablero
+            p Cambiar el Estado del Pedido
+            select.select(name='estadoNuevo' required='')
+                option(value='En Espera') En Espera
+                option(value='Trabajando en Ello..') Trabajando en Ello..
+                option(value='Denegado') Denegado
+                option(value='Listo para Envio') Listo para Envio
+            input.inputSubmit(type='submit' value='Asignar Estado')
+.box2
+    strong Cliente
+    hr
+    p
+        | ID del Cliente:
+        b
+            |  #{data4.id}
+    p
+        | Nombre y Apellido:
+        b
+            |  #{data4.nombreUsuario} #{data4.apellidoUsuario}
+    p
+        | Usuario:
+        b
+            |  #{data4.login}
+.box3
+    strong Metodo de pago del cliente
+    hr
+    p
+        | Numero de Tarjeta de Credito:
+        b
+            |  #{data3[0].numeroDeTarjeta}
+    p
+        | Tarjeta de Credito a nombre de:
+        b
+            |  #{data3[0].nombreEnTarjeta}
+    p
+        | Fecha de Vencimiento:
+        b
+            |  #{data3[0].fechaVencimiento}
+.box4
+    strong Direccion a enviar
+    hr
+    p
+        | Domicilio a Entregar:
+        b
+            |  #{data2[0].direccion}
+    p
+        | Ubicado en el Estado de:
+        b
+            |  #{data2[0].estado}
+    p
+        | Nombre del Residente a Recibir el Pedido:
+        b
+            |  #{data2[0].nombreResidente}
+    p
+        | Codigo Postal:
+        b
+            |  #{data2[0].codigoPostal}
+    p
+        | Contacto con el cliente (Numero Telefonico):
+        b
+            |  #{data2[0].numeroTelefonico}
+a.botonRegresar(href='inicio') Regresar

@@ -1,0 +1,158 @@
+body {
+    margin: 10px 50px;
+    background-color: lightblue;
+}
+
+p {
+    font-size: normal;
+    font-family: cursive;
+}
+
+.textoGrande {
+    font-size: larger;
+    font-family: cursive;
+}
+
+.formulario1 {
+    position: relative;
+    top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 350px;
+}
+
+.tablero1 {
+    height: 325px;
+    border-color: lightblue;
+    
+}
+
+.inputText {
+    width: 230px;
+    height: 25px;
+    display: inline-block;
+}
+
+.inputNumber {
+    width: 100px;
+    height: 25px;
+    display: inline-block;
+}
+
+.select1 {
+    width: 150px;
+    height: 25px;
+    display: inline-block;
+}
+
+.select2 {
+    width: 260px;
+    height: 25px;
+    display: inline-block;
+}
+
+.inputDate1 {
+    width: 170px;
+    height: 25px;
+    display: inline-block;
+}
+
+.inputSubmit1 {
+    width: 150px;
+    height: 25px;
+    display: inline-block;
+    background-color: teal;
+    color: white;
+}
+
+.inputSubmit1:hover {
+    background-color: cadetblue;
+}
+
+.posicion1 { 
+    position: relative; 
+    left: 10px;
+}
+
+.posicion2 { 
+    position: relative; 
+    left: 380px;
+    bottom: 84.1px;
+}
+
+.posicion2_1 { 
+    position: relative; 
+    left: 270px;
+    bottom: 45px;
+}
+
+.posicion3 { 
+    position: relative; 
+    left: 10px;
+    bottom: 80px;
+}
+
+.posicion4 { 
+    position: relative; 
+    left: 10px;
+    bottom: 80px;
+}
+
+.posicion5 {
+    position: relative;
+    left: 186.5px;
+    bottom: 185px;
+}
+
+.posicion6 {
+    position: relative;
+    left: 10px;
+    bottom: 240px;
+}
+
+.posicion7 {
+    position: relative;
+    left: 270px;
+    bottom: 239px;
+}
+
+.posicion8 {
+    position: relative;
+    left: 270px;
+    bottom: 239px;
+}
+
+.texto1 {
+    position: relative;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cursive;
+    width: 700px;
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+}
+
+.botonRegresar {
+    position: relative;
+    top: 135px;
+    left: 910px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: solid;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-right-color: black;
+    border-bottom-color: black;
+}
+
+.botonRegresar:hover {
+    background-color: cadetblue;
+}

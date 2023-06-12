@@ -1,0 +1,25 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Actualizar Direccion
+    link(rel='stylesheet' href='/stylesheets/actualizarDireccion.css')
+.texto1
+    h2 Actualizar Direccion
+    p.textoGrande
+        | Remplace los datos que desee cambiar en la direccion dada en el siguiente formulario, no es necesario cambiar todos los datos, por lo que un cambio no le hace da&ntilde;o a nadien.
+form(action="direcciones/actualizarDirecciones/"+direccion method="POST").formulario1
+    fieldset.tablero1
+        .posicion1
+            input.inputText1(type='text' name='estado' value=estado required='')
+        .posicion2
+            input.inputText1(type='text' name='nombre' value=nombreResidente required='')
+        .posicion3
+            input.inputText2(type='text' name='direccion1' value=direccion required='')
+        .posicion4
+            input.inputNumber(type='number' name='codigoPostal' value=codigoPostal required='')
+        .posicion5
+            input.inputNumber(type='number' name='numeroTelefonico' value=numeroTelefonico required='')
+        .posicion6
+            input.inputSubmit(type='submit' value='Actualizar Direccion')
+a.botonRegresar(href='misDirecciones') Regresar

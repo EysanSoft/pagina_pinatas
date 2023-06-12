@@ -1,0 +1,62 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Actualizar Pedido
+    link(rel='stylesheet' href='/stylesheets/actualizarPedido.css')
+.texto1
+    h2 Actualizar un Pedido
+    p.textoGrande
+        | Reemplaze los datos del pedido a actualizar, no es necesario reemplazar todos los datos, por lo que puede libremente alterar los valores previamente registrados.
+form(action="pedidos/actualizarPedidos/"+id method="POST").formulario1
+    fieldset.tablero1
+        .posicion1
+            input.inputText(type='text' name='nombrePedido' value=nombrePedido required='')
+        p.posicion2_1 Fecha Limite:
+        .posicion2
+            input.inputDate1(type='date' name='fechaLimite' value=fechaLimite required='')
+        .posicion3
+            p Tama&ntilde;o de Pi&ntilde;ata
+            if(tamano == 'Pequeña')
+                select.select1(name='tamano' required='')
+                    option(value='Pequeña' selected) Peque&ntilde;a ($100)
+                    option(value='Mediana') Mediana ($200)
+                    option(value='Grande') Grande ($300)
+            if(tamano == 'Mediana')
+                select.select1(name='tamano' required='')
+                    option(value='Pequeña') Peque&ntilde;a ($100)
+                    option(value='Mediana' selected) Mediana ($200)
+                    option(value='Grande') Grande ($300)
+            if(tamano == 'Grande')
+                select.select1(name='tamano' required='')
+                    option(value='Pequeña') Peque&ntilde;a ($100)
+                    option(value='Mediana') Mediana ($200)
+                    option(value='Grande' selected) Grande ($300)
+        .posicion4
+            p Tipo de Pi&ntilde;ata
+            if(tipo == 'Tambor')
+                select.select1(name='tipo' required='')
+                    option(value='Tambor' selected) Tambor ($50)
+                    option(value='Volumen') Volumen ($150)
+            if(tipo == 'Volumen')
+                select.select1(name='tipo' required='')
+                    option(value='Tambor') Tambor ($50)
+                    option(value='Volumen' selected) Volumen ($150)
+        .posicion7
+            p Metodo de Pago (A Credito)
+            select.select2(name='credito' required='')
+                if (data2.length > 0)
+                    each dato2 in data2
+                        option(value=dato2.numeroDeTarjeta) Tarjeta de Credito: #{dato2.numeroDeTarjeta}
+        .posicion8
+            p Ubicacion a Enviar
+            select.select2(name='direccion' required='')
+                if (data1.length > 0)
+                    each dato1 in data1
+                        option(value=dato1.direccion) #{dato1.direccion}
+        .posicion5
+            textarea.textArea1(name='descripcion' cols='48' rows='5' required='')
+                |#{descripcion}
+        .posicion6
+            input.inputSubmit1(type='submit' value='Actualizar Datos')
+a.botonRegresar(href='misPedidos') Regresar

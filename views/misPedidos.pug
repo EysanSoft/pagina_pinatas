@@ -1,0 +1,55 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Mis Pedidos
+    link(rel='stylesheet' href='/stylesheets/misPedidos.css')
+table.posicionTabla
+    caption Pedidos Solicitados
+    thead
+        tr
+            th ID
+            th Nombre
+            th Fecha Limite
+            th Tama&ntilde;o
+            th Tipo
+            th Descripcion del Cliente
+            th Direccion a Enviar
+            th Tarjeta de Credito a Cubrir
+            th Estado Actual
+    tbody
+        if (data.length > 0)
+            each dato in data
+                tr
+                    td #{dato.id}
+                    td #{dato.nombrePedido}
+                    td #{dato.fechaLimite}
+                    td #{dato.tamano}
+                    td #{dato.tipo}
+                    td #{dato.descripcion}
+                    td #{dato.direccion}
+                    td #{dato.numeroDeTarjeta}
+                    td #{dato.estadoActual}
+        else
+            tr
+                td No hay pedidos solicitados aun.
+
+.texto1
+    h2 Mis Pedidos
+    p.textoGrande
+        | En este apartado, puede visualizar en la tabla superior todos los pedidos realizados, puede actualizar los datos de algun pedido ingresando la id de esta misma, al igual que al cancelarlo, recuerda que si el estado del producto sigue en &quot;Pendiente&quot;, lo podras eliminar, caso contrario, ya no sera posible realizar esto; (Y no habra rembolsos).
+form(action="pedidos/eliminarPedido" method="POST").formulario1
+    fieldset.tablero
+        .posicion1
+            input.inputNumber(type='number' name='IDPedido' placeholder='Ingrese la ID del Pedido' required='')
+        .posicion2
+            input.inputSubmit1(type='submit' value='Cancelar Pedido')
+        .posicion3
+            p(class="alert alert-danger") #{message}
+form(action="actualizarPedido" method="POST").formulario2
+    fieldset.tablero
+        .posicion1
+            input.inputNumber(type='number' name='IDPedido2' placeholder='Ingrese la ID del Pedido' required='')
+        .posicion2
+            input.inputSubmit1(type='submit' value='Actualizar Pedido')
+a.botonRegresar(href='menuUsuario') Regresar

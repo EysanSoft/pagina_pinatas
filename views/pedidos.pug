@@ -1,0 +1,66 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Pedidos
+    link(rel='stylesheet' href='/stylesheets/pedidos.css')
+a.iconoUsuario(href='menuUsuario')
+    img(src='/images/icono.png' alt='icono de usuario' width='50' height='50')
+p.nombreUsuario #{nombreUsuario} #{apellidoUsuario}
+h1 La Hada Madrina de las Pi&ntilde;atas
+img.logoPinata(src='/images/piñata2.png' alt='Foto del Logo de la Pagina' width='150' height='150')
+img.logoHada(src='/images/Hada.png' alt='Foto del Logo de la Pagina' width='200' height='200')
+header
+    nav.barraNavegacion
+        #lista
+            ul.menu
+                li#noActual
+                    a(href='inicio') Inicio
+                li#noActual
+                    a(href='galeria') Galeria
+                li#actual
+                    a(href='') Hacer un pedido
+.texto1
+    h2 HACER UN PEDIDO
+    p.textoGrande
+        | Rellene en todos los campos para solicitar un pedido, se requiere de una direccion y un metodo de pago registrado en tu cuenta para proceder con el pedido.
+if(data1.length != 0 && data2.length != 0)
+    form(action="pedidos/agregarPedidos" method="POST").formulario1
+        fieldset.tablero1
+            .posicion1
+                input.inputText(type='text' name='nombrePedido' placeholder='Nombre del Pedido' required='')
+            p.posicion2_1 Fecha Limite:
+            .posicion2
+                input.inputDate1(type='date' name='fechaLimite' required='')
+            .posicion3
+                p Tama&ntilde;o de Pi&ntilde;ata
+                select.select1(name='tamano' required='')
+                    option(value='Pequeña') Peque&ntilde;a ($100)
+                    option(value='Mediana') Mediana ($200)
+                    option(value='Grande') Grande ($300)
+            .posicion4
+                p Tipo de Pi&ntilde;ata
+                select.select1(name='tipo' required='')
+                    option(value='Tambor') Tambor ($50)
+                    option(value='Volumen') Volumen ($150)
+            .posicion7
+                p Metodo de Pago (A Credito)
+                select.select2(name='credito' required='')
+                    if (data2.length > 0)
+                        each dato2 in data2
+                            option(value=dato2.numeroDeTarjeta) Tarjeta de Credito: #{dato2.numeroDeTarjeta}
+            .posicion8
+                p Ubicacion a Enviar
+                select.select2(name='direccion' required='')
+                    if (data1.length > 0)
+                        each dato1 in data1
+                            option(value=dato1.direccion) #{dato1.direccion}
+            .posicion5
+                textarea.textArea1(name='descripcion' cols='48' rows='5' placeholder='Escriba una breve descripcion sobre su piñata a pedir, lo podemos volver realidad.' required='')
+            .posicion6
+                input.inputSubmit1(type='submit' value='Realizar Pedido')
+else
+    form.formulario1
+        fieldset.tablero1
+            .posicionError
+                p Te hace falta por lo menos tener registrado en tu cuenta un metodo de pago y una ubicacion.

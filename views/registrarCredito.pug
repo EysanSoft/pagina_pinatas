@@ -1,0 +1,24 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Registrar Credito
+    link(rel='stylesheet' href='/stylesheets/registrarCredito.css')
+.texto1
+    h2 Registrar Tarjeta de Credito
+    p.textoGrande
+        | Registre los datos de una tarjeta de credito para cubrir los pedidos a realizar, aceptamos la mayoria de las tarjetas de credito, muy pronto tendremos el metodo de pago por referencia bancaria, por ahora solo sera mediante tarjeta de credito. Una vez registrado los datos, no se podran editar, por cuetiones logicas.
+form(action="pagos/agregarCredito" method="POST").formulario1
+    fieldset.tablero1
+        .posicion1
+            input.inputText(type='number' name='numeroDeTarjeta' placeholder='Numero de Tarjeta' required='')
+        .posicion2
+            input.inputNumber(type='text' name='nombreEnTarjeta' placeholder='Nombre en la Tarjeta' required='')
+        .posicion3
+            p Fecha de Vencimiento
+        .posicion4
+            input.inputDate(type='date' name='fechaVencimiento' required='')
+        .posicion5
+            input.inputSubmit(type='submit' value='Registrar Credito')
+        p(class="alert alert-danger") #{message}
+a.botonRegresar(href='misPagos') Regresar

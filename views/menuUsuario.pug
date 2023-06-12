@@ -1,0 +1,25 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Menu de Usuario
+    link(rel='stylesheet' href='/stylesheets/menuUsuario.css')
+a.cerrarSession(href='logout') Cerrar Session
+h1 Usuario Actual: #{nombreUsuario} #{apellidoUsuario}
+a.posicion1(href='misPedidos')
+    .botonGenerico
+        p.textoGrande Mis Pedidos
+        p Vea todos los pedidos que ha solicitado.
+        img.posicionImagen(src='/images/piñata1.png' alt='' width='50' height='50')
+a.posicion2(href='misDirecciones')
+    .botonGenerico
+        p.textoGrande Mis Ubicaciones
+        p Vea todos sus ubicaciones registradas.
+        img.posicionImagen(src='/images/Ubicacion.png' alt='' width='50' height='50')
+a.posicion3(href='misPagos')
+    .botonGenerico
+        p.textoGrande Metodos de Pago
+        p Ingrese los metodos a cubrir sus pedidos.
+        img.posicionImagen(src='/images/Tarjeta.png' alt='' width='50' height='50')
+br
+a.botonInicio(href='inicio') Regresar a la pagina principal

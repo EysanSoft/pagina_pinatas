@@ -1,0 +1,24 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Registrar Usuario
+    link(rel='stylesheet' href='/stylesheets/registrarUsuario.css')
+form(action="users/agregarUsuarios" method="POST").posicionTablero
+    fieldset.fieldset1
+        h1 Crea tu nueva cuenta para realizar un pedido
+        #posicion1
+            input.inputs(type='text' name='nombre' placeholder='Primer Nombre' required='')
+        #posicion2
+            input.inputs(type='text' name='apellido' placeholder='Apellido Paterno' required='')
+        #posicion3
+            input.inputs(type='text' name='username' placeholder='Nombre de Usuario (cuenta)' required='')
+        #posicion4
+            input.inputs(type='passWord' name='password' placeholder='Contraseña' required='')
+        #posicion5
+            input.inputs(type='passWord' name='password2' placeholder='Confirmar Contraseña' required='')
+        #posicion6
+            input.botonIngresar(type='submit' value='Crear Cuenta')
+        #posicion7
+            if (message && message.length > 0)
+                p(class="alert alert-danger") #{message}

@@ -1,0 +1,69 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Galeria
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+    link(rel='stylesheet' href='/stylesheets/galeria.css')
+a.iconoUsuario(href='menuUsuario')
+    img(src='/images/icono.png' alt='icono de usuario' width='50' height='50')
+p.nombreUsuario #{nombreUsuario} #{apellidoUsuario}
+h1 La Hada Madrina de las Pi&ntilde;atas
+img.logoPinata(src='/images/piñata2.png' alt='Foto del Logo de la Pagina' width='150' height='150')
+img.logoHada(src='/images/Hada.png' alt='Foto del Logo de la Pagina' width='200' height='200')
+header
+    nav.barraNavegacion
+        #lista
+            ul.menu
+                li#noActual
+                    a(href='inicio') Inicio
+                li#actual
+                    a(href='') Galeria
+                li#noActual
+                    a(href='pedidos') Hacer un pedido
+#caja1
+    h2 GALERIA
+    p
+        | Esta coleccion de pi&ntilde;anas son producto de todo lo que hemos entregado a nuestros clientes, esto no es un catalogo,
+        | es mas bien estas son las evidencias de nuestra calidad.
+    #carouselExampleControls.carousel.slide(data-ride='carousel')
+        .carousel-inner
+            .carousel-item.active
+                img.d-block.w-100(src='/images/galeria2.jpeg' alt='First slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria3.jpeg' alt='Second slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria4.jpeg' alt='Third slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria5.jpeg' alt='fourth slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria6.jpeg' alt='fith slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria7.jpeg' alt='Second slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria8.jpeg' alt='Third slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria9.jpeg' alt='fourth slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria10.jpeg' alt='fith slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria11.jpeg' alt='Second slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria12.jpeg' alt='Third slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria13.jpeg' alt='fourth slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria14.jpg' alt='fith slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria15.jpg' alt='fourth slide' height='550')
+            .carousel-item
+                img.d-block.w-100(src='/images/galeria16.jpg' alt='fith slide' height='550')
+        a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+        a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

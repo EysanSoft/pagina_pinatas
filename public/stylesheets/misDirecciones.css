@@ -1,0 +1,148 @@
+body {
+    margin: 10px 50px;
+    background-color: lightblue;
+}
+
+p {
+    font-size: normal;
+    font-family: cursive;
+}
+
+.textoGrande {
+    font-size: larger;
+    font-family: cursive;
+}
+
+.formulario1 {
+    position: relative;
+    top: 120px;
+    left: 639.5px;
+    width: 400px;
+    height: 300px;
+}
+
+.formulario2 {
+    position: relative;
+    bottom: 120px;
+    left: 639.5px;
+    width: 400px;
+    height: 300px;
+}
+
+.tablero {
+    border: none;
+}
+
+.inputNumber {
+    width: 160px;
+    height: 25px;
+    display: inline-block;
+}
+
+.inputSubmit1 {
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    background-color: teal;
+    color: white;
+}
+
+.inputSubmit1:hover {
+    background-color: cadetblue;
+}
+
+.posicion1 { 
+    position: relative; 
+    left: 20px;
+}
+
+.posicion2 { 
+    position: relative; 
+    left: 195px;
+    bottom: 30.3px;
+}
+
+.posicion3 {
+    position: relative;
+    left: 140px;
+}
+
+.texto1 {
+    position: relative;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cursive;
+    width: 700px;
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+th {
+    background:teal;
+    color: #fff;
+}
+
+td, th {
+    text-align: center;
+    padding: 0.5em;
+}
+
+.posicionTabla {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
+}
+
+.botonRegresar {
+    position: relative;
+    bottom: 350px;
+    left: 675px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: solid;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-right-color: black;
+    border-bottom-color: black;
+}
+
+.botonRegresar:hover {
+    background-color: cadetblue;
+}
+
+.botonRegistrar {
+    position: relative;
+    top: 193px;
+    left: 425px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: solid;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-right-color: black;
+    border-bottom-color: black;
+}
+
+.botonRegistrar:hover {
+    background-color: cadetblue;
+}

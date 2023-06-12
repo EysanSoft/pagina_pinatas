@@ -1,0 +1,87 @@
+body {
+    margin: 150px 200px;
+    background-color: lightblue;
+}
+
+.cerrarSession {
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.posicion1 { 
+    position: relative; 
+    text-decoration: none;
+    display: inline-block;
+    left: 20px;
+    top: 50px;
+}
+
+.posicion2 { 
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    left: 170px;
+    top: 50px;
+}
+
+.posicion3 { 
+    position: relative;
+    text-decoration: none; 
+    display: inline-block;
+    left: 320px;
+    top: 50px;
+}
+
+.botonGenerico {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: solid;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-right-color: black;
+    border-bottom-color: black;
+    text-decoration: none;
+}
+
+.botonInicio {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    left: 930px;
+    top: 100px;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: solid;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-right-color: black;
+    border-bottom-color: black;
+    text-decoration: none;
+    
+}
+
+.textoGrande {
+    font-size: larger;
+}
+
+.posicionImagen {
+    position: absolute;
+    display: inline-block;
+    left: 200px;
+    bottom: 60px;
+}
+
+.botonGenerico:hover {
+    background-color: cadetblue;
+}
+
+.botonInicio:hover {
+    background-color: cadetblue;
+}
+
+.cerrarSession:hover {
+    color: white;
+}

@@ -1,0 +1,20 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Login
+    link(rel='stylesheet' href='/stylesheets/login.css')
+form(action="login/loginPassport" method="POST").formularioLogin
+    img(src='/images/Hada.png' alt='Foto del Logo de la Pagina' width='120' height='120')
+    fieldset.tablero
+        h1 Iniciar Session
+        #posicion1
+            input.inputText(type='text' name="username" placeholder='Usuario' required='')
+        #posicion2
+            input.inputPassword(type='passWord' name="password" placeholder='Contraseña' required='')
+        #posicion3
+            input.boton(type='submit' value='OK')
+        #posicion4
+            a(href='registrarUsuario') Crear una cuenta
+        #posicion5
+            p(class="alert alert-danger") #{message}

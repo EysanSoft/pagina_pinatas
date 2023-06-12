@@ -1,0 +1,108 @@
+h1 {
+    position: relative;
+    display: inline-block;
+    left: 200px;
+    top: 120px;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.logoPinata {
+    position: relative;
+    display: inline-block;
+    left: 370px;
+    top: 120px;
+
+}
+
+.logoHada {
+    position: relative;
+    display: inline-block;
+    left: 380px;
+    top: 70px;
+}
+
+body {
+    margin: 10px 50px;
+    background-color: lightblue;
+}
+
+.barraNavegacion{
+    position: relative;
+    top: 150px;
+    right: 20px;
+    text-align: center;
+	width: auto;
+    margin: 20px 20px;
+}
+
+.barraNavegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+li:hover {
+    background-color: cadetblue;
+}
+
+.menu > li > a {
+	display: block;
+	padding: 20px;
+	color: black;
+    font-family: 'Open sans';
+    font-size: larger;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	color: whitesmoke;
+	transition: all .3s;
+}
+
+#actual {
+    background-color:  teal;
+}
+
+#caja1 {
+    position: relative;
+    top: 200px;
+    left: 265px;
+    width: 900px;
+    height: 700px;
+    display: inline-block;
+}
+
+p {
+    font-size: larger;
+    font-family: cursive;
+}
+
+h2 {
+    text-align: center;
+    font-family: cursive;
+}
+
+#foto {
+    position: relative;
+    left: 35px;
+}
+
+.iconoUsuario {
+    position: absolute;
+    display: inline-block;
+    left: 155px;
+    top:50px;
+}
+
+.nombreUsuario {
+    position: absolute;
+    display: inline-block;
+    left: 235px;
+    top:65px;
+}

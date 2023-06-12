@@ -1,0 +1,47 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Menu de Administrador
+    link(rel='stylesheet' href='/stylesheets/menuAdmin.css')
+div
+    a.cerrarSession(href='logout') Cerrar Session
+    h1 Bienvenid@ #{nombreUsuario} #{apellidoUsuario}
+.caja2
+    p Ingrese la ID del pedido para ver los detalles de este y del cliente
+    form(action="detallesPedido" method="POST")
+        fieldset.tablero
+            input.inputNumber(type='number' name='idPedido' placeholder='ID del Pedido' required='')
+            input.inputSubmit(type='submit' value='Buscar')
+.caja1
+    table
+        caption Pedidos Recibidos
+        thead
+            tr
+                th ID
+                th Nombre
+                th Fecha Limite
+                th Tama&ntilde;o
+                th Tipo
+                th Descripcion del Cliente
+                th Direccion a Enviar
+                th Tarjeta de Credito a Cubrir
+                th Estado Actual
+                th ID del Cliente
+        tbody
+            if (data1.length > 0)
+                each dato in data1
+                    tr
+                        td #{dato.id}
+                        td #{dato.nombrePedido}
+                        td #{dato.fechaLimite}
+                        td #{dato.tamano}
+                        td #{dato.tipo}
+                        td #{dato.descripcion}
+                        td #{dato.direccion}
+                        td #{dato.numeroDeTarjeta}
+                        td #{dato.estadoActual}
+                        td #{dato.idUsuario}
+            else
+                tr
+                    td Sin Pedidos Pendientes ;)

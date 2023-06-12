@@ -1,0 +1,90 @@
+body {
+    background-color: lightblue;
+    font-family: arial;
+    margin: 50px 120px 150px 120px;
+    padding: 20px;
+    text-align: center;	 
+    color: white;
+}
+
+form {
+    display: inline-block;
+}
+
+.posicionTablero{
+    position:relative;
+    top: 50px;
+}
+
+.fieldset1 {
+    background: teal;
+    border-color: transparent;
+    width: 800px;
+    height: 420px;
+}
+
+
+#posicion1 { 
+    position: relative; 
+    display: inline-block;
+    top: 50px;
+    right: 80px;
+}
+
+#posicion2 { 
+    position: relative; 
+    display: inline-block;
+    top: 50px;
+    left: 80px;
+}
+
+#posicion3 { 
+    position: relative;
+    top: 100px;
+    right: 200px;
+}
+
+#posicion4 { 
+    position: relative;
+    display: inline-block;
+    top: 150px;
+    right: 80px;
+
+}
+
+#posicion5 { 
+    position: relative;
+    display: inline-block;
+    top: 150px;
+    left: 80px;
+}
+
+#posicion6 { 
+    position: relative;
+    top: 200px;
+    left: 200px;
+}
+
+#posicion7 {
+    position: relative;
+    top: 155px;
+    right: 160px;
+}
+
+.inputs {
+    width: 230px;
+    height: 25px;
+}
+
+.botonIngresar{
+    width: 200px;
+    height: 35px;
+    background-color: cadetblue;
+    color: white;
+}
+
+.botonIngresar:hover {
+    background-color: lightblue;
+    color: black;
+}
+

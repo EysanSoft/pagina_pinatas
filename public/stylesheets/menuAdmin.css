@@ -1,0 +1,88 @@
+body {
+    margin: 150px 200px;
+    background-color: lightblue;
+}
+
+p, a {
+    font-size: normal;
+    font-family: cursive;
+}
+
+h1 {
+    font-family: cursive;
+}
+
+.cerrarSession {
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.cerrarSession:hover {
+    color: white;
+}
+
+.botonGenerico {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: solid;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-right-color: black;
+    border-bottom-color: black;
+    text-decoration: none;
+}
+
+.botonGenerico:hover {
+    background-color: cadetblue;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+th {
+    background:teal;
+    color: #fff;
+}
+
+td, th {
+    text-align: center;
+    padding: 0.5em;
+}
+
+.caja1 {
+    margin: 50px;
+}
+
+.caja2 {
+    margin: 50px;
+}
+
+.tablero {
+    border: none;
+}
+
+.inputNumber {
+    width: 120px;
+    height: 25px;
+    display: inline-block;
+}
+
+.inputSubmit {
+    width: 80px;
+    height: 30px;
+    display: inline-block;
+    background-color: teal;
+    color: white;
+}
+
+.inputSubmit:hover {
+    background-color: cadetblue;
+}

@@ -1,0 +1,25 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Registrar Direccion
+    link(rel='stylesheet' href='/stylesheets/registrarDireccion.css')
+.texto1
+    h2 Registra una Direccion
+    p.textoGrande
+        | Rellene el siguiente formulario para registrar una direccion valida, muy pronto estaremos mandando nuestras pi&ntilde;atas fuera del Pais, eso dependera de ustedes.
+form(action="direcciones/registrarDireccion" method="POST").formulario1
+    fieldset.tablero1
+        .posicion1
+            input.inputText1(type='text' name='estado' placeholder='Estado (Mexico solamente)' required='')
+        .posicion2
+            input.inputText1(type='text' name='nombre' placeholder='Nombre del Residente' required='')
+        .posicion3
+            input.inputText2(type='text' name='direccion' placeholder='Direccion del Domicilio' required='')
+        .posicion4
+            input.inputNumber(type='number' name='codigoPostal' placeholder='Codigo Postal' required='')
+        .posicion5
+            input.inputNumber(type='number' name='numeroTelefonico' placeholder='Numero Telefonico' required='')
+        .posicion6
+            input.inputSubmit(type='submit' value='Registrar Direccion')
+a.botonRegresar(href='misDirecciones') Regresar
